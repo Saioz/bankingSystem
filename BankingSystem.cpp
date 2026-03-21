@@ -12,7 +12,7 @@ Description: Banking System - Midterm Project
 #include <string>
 #include <iomanip>
 #include <vector>
-#include <limits> //used ai to see how to implement cin.ignore like how the rubric is
+#include <limits> //used ai to ask how to implement cin.ignore like how the rubric recommends
 
 #include "BankAccount.h"
 
@@ -131,18 +131,26 @@ int main() {
     return 0;
 }
 
+
+//Shadman Yusuf Kayes's reflection:
+
 /*
-Shadman Yusuf Kayes's reflection:
 For this project, I mainly worked on the header file with Axel. One part that I got issues from was trying to set the decimal point to 2 inside a string
 for the vector. This was a problem because of how setprecision only works when outputting and cannot be used for storing. I found a work around by using using
 substr and find, where I would get the substring of the amount and use .find('.') + 3 for the length. This helped me control how the string was stored in the 
 transaction history and keep it consistent with two decimal places. Finding this out helped me understand the difference between formatting output and actually 
 modifying stored data.
 
+*/
 
+//Anthony Lin's reflection:
 
+/*
 
-
-
+In this project, I worked mainly on the main file alongside Katriel. Something that was tricky and gave me a bunch of issues was 
+trying to set up the initial menu screen. When I was trying to set up the while loop, I made a switch case that was outside of the loop
+this took a while for me to figure out and was something I overlooked. I learned that getline doesn't need cin.fail() which should've been obvious.
+Since getline just retrieves whatever is inserted. In this case, it stores a string, which can be numbers, doubles, literally anything. Additionally, I learned
+about what continue does, in this case, continue just returns the code back into the while loop. 
 
 */
