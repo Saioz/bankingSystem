@@ -7,6 +7,8 @@ DATE: 3/21/2026
 #include <iostream>
 #include <string>
 #include <vector>
+#include <iomanip>
+
 using namespace std;
 
 
@@ -17,7 +19,7 @@ class BankAccount {
     string ownerName;           //Stores string of the account holder
     int accountNumber;          // Stores int for the unique ID for the holder's bankaccount
     double balance;             // Stores the current money amount (uses decimal point values)
-    vector <string> history;    // A dynamic list to save every successful transaction marriage
+    vector <string> history;    // A dynamic list to save every successful transaction message
     
     
 
