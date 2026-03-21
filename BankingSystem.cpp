@@ -1,4 +1,4 @@
-// Name: ------------------
+// Name: Anthony, Yusuf, Axel, Katriel
 // Date: 3/20/26
 // Description: Banking System - Midterm Project
 
