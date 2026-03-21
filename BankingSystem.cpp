@@ -45,7 +45,7 @@ int main() {
   }
   cin.ignore(1000, '\n');
 
-  }
+  
   switch (choice) {
     case 1: 
     cout << "case1"<< endl;
@@ -74,7 +74,7 @@ int main() {
     default: 
     cout << "this is default, please select a valid menu option!" << endl;
     break;
-
+  }
 
   }
 
