@@ -1,9 +1,3 @@
-*/
-PROJECT: Banking System with Transaction History Project
-NAME: Katriel Morales
-DATE: 3/21/2026
-*/
-
 #include <iostream>
 #include <string>
 #include <vector>
