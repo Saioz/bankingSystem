@@ -4,17 +4,55 @@
 
 #include <iostream>
 #include <string>
-#include <limits>
-#include "BankAccount.h"
+#include <iomanip>
+#include <vector>
+
+//#include "BankAccount.h"
 
 using namespace std;
 
+double getPosDouble(const string& prompt) {
+  //makes sure that the input from the user is a valid and POSITIVE double
+    double value;
+    while (true) {
+        cout << prompt;
+        cin >> value;
+        if (cin.fail() || value <= 0) {
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cout << "Invalid input. Pleas re-enter your positive number." << endl;
+        } else {
+            cin.ignore(1000, '\n');
+            return value;
+        }
+    }
+}
 
+// gets a positive int from cin user, then uses a while loop to make sure input is valid. 
+int getPosInt(const string& prompt) {
+    int value;
+    while (true) {
+        cout << prompt;
+        cin >> value;
+        if (cin.fail() || value <= 0) {
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cout << "Invalid input. Please re-enter your positive integer." << endl;
+        } else {
+            cin.ignore(1000, '\n');
+            return value;
+        }
+    }
+}
 
 int main() {
   cout << "======== <  Banking System > ========" << endl;
   // print the banking system name, making it look nice!
+  int accNum = getPosInt("Enter account number: ");
+  double initialDeposit = getPosDouble("Enter initial deposit (>0): ");
 
+    // Create the account
+  BankAccount account(name, accNum, initialDeposit);
 
   string name;
   cout << "Please enter account name: ";
@@ -74,8 +112,7 @@ int main() {
     default: 
     cout << "this is default, please select a valid menu option!" << endl;
     break;
-  }
 
   }
-
+  }
 }
