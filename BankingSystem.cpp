@@ -106,7 +106,7 @@ int main() {
     break;
 
     case 6: 
-    cout << "case6" << endl;
+    cout << "Goodbye!" << endl;
     break;
 
     default: 
