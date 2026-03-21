@@ -154,3 +154,14 @@ Since getline just retrieves whatever is inserted. In this case, it stores a str
 about what continue does, in this case, continue just returns the code back into the while loop. 
 
 */
+
+// Katriel Morales's Reflection:
+
+/*
+While structuring the Bank System Transaction History App, I was able to initialize the BankAccount.h class 
+and made sure the logic in our implementation file was consistent. I also collaborated closely with my groupmate Axel and 
+checked that his member functions were implemented correctly to ensure the code would run smoothly. 
+This project helped me understand the importance of peer review and the benefits of using switch case statements, 
+as they made the menu logic much simpler and neater to read and use for this project.
+
+*/
