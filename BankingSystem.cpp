@@ -126,3 +126,30 @@ int main() {
 
 
 */
+
+/*
+Yusuf's Reflection:
+
+
+
+
+*/
+
+/* Katriel's reflection: 
+
+
+
+
+
+
+*/
+
+
+/* Axel's reflection:
+
+
+
+
+
+
+*/
