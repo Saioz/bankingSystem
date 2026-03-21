@@ -15,6 +15,6 @@ using namespace std;
 
 
 int main() {
-  cout << "please give me your name: ";
-  cin >> name;
+  cout << "======== <  Banking System > ========";
+
 }
