@@ -1,3 +1,6 @@
+#ifndef BANKACCOUNT_H
+#define BANKACCOUNT_H
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -20,7 +23,7 @@ class BankAccount {
     
     public:
     
-    BankAccount(const string&, int, double); //Constructor
+    BankAccount(const string& name, int accNum, double intitialDeposit); //Constructor
     void deposit(double amount);    // Adding to balance and gets recorded to history
     bool withdraw(double amount);   // Subracts to balance and if valid gets recorded to history
     double getBalance() const;      //Returns current balance
@@ -28,4 +31,5 @@ class BankAccount {
     void showHistory() const;       // Printing transaction history
 };
 
+#endif
 
