@@ -70,7 +70,7 @@ int main() {
     cout << "3) Show Balance:" << endl;
     cout << "4) Show Account Info:" << endl;
     cout << "5) Show Transaction History:" << endl;
-    cout << "6) -Exit-" << endl;
+    cout << "6) Exit" << endl;
     cout << "Choose option: ";
   
     cin >> choice;
