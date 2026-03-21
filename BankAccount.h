@@ -16,56 +16,58 @@ private:// Private Encapsualtion - These members are hidden from the outside acc
     vector<string> history;//a vector to keep track of past transactions
 
 public:
-    BankAccount(const string& name, int accNum, double initialDeposit) {
+    BankAccount(const string& name, int accNum, double initialDeposit) { //parameterized constructor
         ownerName = name;
         accountNumber = accNum;
         balance = initialDeposit;
-        string text = to_string(initialDeposit);
-        text = text.substr(0, text.find('.') + 3);
+
+        string text = to_string(initialDeposit); 
+        text = text.substr(0, text.find('.') + 3); //method of saving the string with 2 decimal points into the vector
 
         history.push_back("Account created with initial deposit $" + text);
     }
 
+    double getBalance() const { //getter for balance
+        return balance;
+    }
+
     void deposit(double amount) {
-        balance += amount;
+        balance += amount; //adds the deposit to the balance 
         
         string text = to_string(amount);
         text = text.substr(0, text.find('.') + 3); //stores with 2 decimal
 
-        history.push_back("Deposited $" + text);
+        history.push_back("Deposited $" + text);//adds the deposit into the vector
 
-        cout << fixed << setprecision(2);
+        cout << fixed << setprecision(2); //prints with 2 decimal points
         cout << "Deposited $" << amount << endl;
     }
 
     bool withdraw(double amount) {
-        if (amount > balance) {
+        if (amount > balance) { //returns false when the amount withdrawn is more than the balance
             cout << "Insufficient funds." << endl;
             return false;
         }
 
-        balance -= amount;
+        balance -= amount; //decreases the withdrawn amount into balance
         
         string text = to_string(amount);
         text = text.substr(0, text.find('.') + 3);
 
-        history.push_back("Withdrew $" + text);
+        history.push_back("Withdrew $" + text); //stores with 2 decimal
 
-        cout << fixed << setprecision(2);
+        cout << fixed << setprecision(2); //prints with 2 decimal points
         cout << "Withdrew $" << amount << endl;
 
-        if (balance == 0) {
+        if (balance == 0) { //if balance reaches 0 after the withdraw
             cout << "Balance is now zero." << endl;
         }
 
         return true;
     }
 
-    double getBalance() const {
-        return balance;
-    }
 
-    void display() const {
+    void display() const { //displays current account information with 2 decimal points
         cout << fixed << setprecision(2);
         cout << "\n=== Account Information ===" << endl;
         cout << "Owner Name: " << ownerName << endl;
@@ -73,7 +75,7 @@ public:
         cout << "Balance: $" << balance << endl;
     }
 
-    void showHistory() const {
+    void showHistory() const { //displays the account history using for loop 
         cout << "\nTransaction History (" << history.size() << "):" << endl;
 
         for (int i = 0; i < history.size(); i++) {
