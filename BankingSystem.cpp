@@ -77,7 +77,7 @@ int main() {
     cout << "3) Show Balance:" << endl;
     cout << "4) Show Account Info:" << endl;
     cout << "5) Show Transaction History:" << endl;
-    cout << "6) Exit" << endl;
+    cout << "6) -Exit-" << endl;
     cout << "Choose option: ";
   
     cin >> choice;
@@ -117,16 +117,10 @@ int main() {
             account.showHistory();
             break;
 
-<<<<<<< HEAD
         case 6://exit
             cout << "Goodbye!" << endl;
             loop = false;
             break;
-=======
-    case 6: 
-    cout << "Goodbye!" << endl;
-    break;
->>>>>>> 14686d31239ee3b1d07288e554f234ca94872e35
 
         default:
             cout << "Please select a valid menu option!" << endl;
@@ -136,7 +130,6 @@ int main() {
     return 0;
 }
 
-<<<<<<< HEAD
 /*
 Shadman Yusuf Kayes's reflection:
 For this project, I mainly worked on the header file with Axel. One part that I got issues from was trying to set the decimal point to 2 inside a string
@@ -152,42 +145,3 @@ modifying stored data.
 
 
 */
-
-=======
-/* Anthony's reflection :
-
-
-
-
-
-
-
-*/
-
-/*
-Yusuf's Reflection:
-
-
-
-
-*/
-
-/* Katriel's reflection: 
-
-
-
-
-
-
-*/
-
-
-/* Axel's reflection:
-
-
-
-
-
-
-*/
->>>>>>> 14686d31239ee3b1d07288e554f234ca94872e35
