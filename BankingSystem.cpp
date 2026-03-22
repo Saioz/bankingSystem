@@ -168,7 +168,7 @@ about what continue does, in this case, continue just returns the code back into
 /*
 While structuring the Bank System Transaction History App, I was able to initialize the BankAccount.h class and ensured the logic in our implementation file was consistent. 
 I assisted on helping Anthony to worked on the functions in main() to make sure that the user entered the correct double and integer values before the program had processed them. 
-Additionally, I checked on how to use limits that hold specific data type values such as (int, string, double, float, char etc.) So, I added the <limits> library to 
+Additionally, I had to know on how to use limits, so I went to my notes and checked on how to use limits that hold specific data type values such as (int, string, double, float, char etc.) So, I added the <limits> library to 
 implement cin.ignore(numeric_limits<streamsize>::max(), '\n'). By using AI, I was also able to learn how to implement the overall logic structure of the code based on the rubric requirements that has helped me to better understand 
 how to fully clear the input buffer, which improved the program's ordering and preventing input errors. 
 
