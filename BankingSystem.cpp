@@ -62,14 +62,15 @@ int main() {
   int accNum = getPosInt("Enter account number: ");
   double initialDeposit = getPosDouble("Enter initial deposit (>0): ");
 
-    // Create the account
+    //  Build the object using class
   BankAccount account(name, accNum, initialDeposit);
 
   
   int choice; //initializes the choice for the while loop menu. ** using case switch to make it easier than if/else 
   
   bool loop = true;//used for the while loop to break
-  
+
+  // Start of the main interaction loop
   while (loop) {
   // menu options
     cout << "\nMenu:" << endl;
@@ -82,48 +83,49 @@ int main() {
     cout << "Choose option: ";
   
     cin >> choice;
-    
+    // Stream Validation: Checks if the input is a valid integer
   if(cin.fail()) { //checks if valid input
     cin.clear();
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
     cout << "Invalid, Please re-enter menu option :";
     continue;
   }
+    // Clearing the buffer after a successful numeric input
   cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
-  
+  // Switch statement used for a cleaner, more compact menu compared to if-else
   switch (choice) { //switch was more compact than if-else statement
-        case 1: { //deposit
+        case 1: { //Deposit logic
             double amount = getPosDouble("Amount to deposit: ");
-            account.deposit(amount);
+            account.deposit(amount); // Calls the member function to update balance
             break;
         }
 
-        case 2: {//withdraw
+        case 2: {//Withdrawal logic
             double amount = getPosDouble("Amount to withdraw: ");
-            account.withdraw(amount);
+            account.withdraw(amount); // Calls the member function (includes balance check)
             break;
         }
 
-        case 3://check Balance
-            cout << fixed << setprecision(2);
+        case 3://check Balance // Check current balance
+            cout << fixed << setprecision(2); // Formats output to 2 decimal places for currency consistency
             cout << "Balance: $" << account.getBalance() << endl;
             break;
 
-        case 4://display
+        case 4://display // Display full account details (Name, ID, Balance)
             account.display();
             break;
 
-        case 5://History
+        case 5://History // Display full account details (Name, ID, Balance)
             account.showHistory();
             break;
 
-        case 6://exit
+        case 6://exit // Exit the program
             cout << "Goodbye!" << endl;
             loop = false;
             break;
 
-        default:
+        default: // Handles integer inputs that are not 1-6
             cout << "Please select a valid menu option!" << endl;
         }
     }
