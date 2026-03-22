@@ -41,11 +41,17 @@ int getPosInt(const string& prompt) {
     while (true) {
         cout << prompt;
         cin >> value;
-        if (cin.fail() || value <= 0) {
-            cin.clear();
-            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+        // Check if the input failed (non-numeric) or if the number is zero/negative
+        if (cin.fail() || value <= 0) { 
+            cin.clear(); // Clear the error flag so cin can be used again
+
+            // Use numeric_limits to wipe the entire input buffer to prevent infinite loops
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
+            
             cout << "Invalid input. Please re-enter your positive integer." << endl;
         } else {
+            // Success: Clear any remaining characters (like a trailing newline) and return
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             return value;
         }
@@ -160,11 +166,12 @@ about what continue does, in this case, continue just returns the code back into
 // Katriel Morales's Reflection:
 
 /*
-While structuring the Bank System Transaction History App, I was able to initialize the BankAccount.h class 
-and made sure the logic in our implementation file was consistent. I also collaborated closely with my groupmate Axel and 
-checked that his member functions were implemented correctly to ensure the code would run smoothly. 
-This project helped me understand the importance of peer review and the benefits of using switch case statements, 
-as they made the menu logic much simpler and neater to read and use for this project.
+While structuring the Bank System Transaction History App, I was able to initialize the BankAccount.h class and ensured the logic in our implementation file was consistent. 
+I assisted on helping Anthony to worked on the functions in main() to make sure that the user entered the correct double and integer values before the program had processed them. 
+Additionally, I went back into my notes and checked on how to use limits that hold specific data type values such as (int, string, double, float, char etc.) So, I added the <limits> library to 
+implement cin.ignore(numeric_limits<streamsize>::max(), '\n'). By using AI, I was also able to learn how to implement the overall logic structure of the code based on the rubric requirements that has helped me to better understand 
+how to fully clear the input buffer, which improved the program's orderin and preventing input errors. 
+I also collaborated closely with my groupmate Axel and checked that his member functions were implemented correctly to ensure the code would run smoothly.
 
 */
 
