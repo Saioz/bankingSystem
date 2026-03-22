@@ -166,13 +166,11 @@ about what continue does, in this case, continue just returns the code back into
 // Katriel Morales's Reflection:
 
 /*
-While structuring the Bank System Transaction History App, I was able to initialize the BankAccount.h class and ensured the logic in our implementation file was consistent. 
-I assisted on helping Anthony to worked on the functions in main() to make sure that the user entered the correct double and integer values before the program had processed them. 
-Additionally, I had to know on how to use limits, so I went to my notes and checked on how to use limits that hold specific data type values such as (int, string, double, float, char etc.) So, I added the <limits> library to 
-implement cin.ignore(numeric_limits<streamsize>::max(), '\n'). By using AI, I was also able to learn how to implement the overall logic structure of the code based on the rubric requirements that has helped me to better understand 
-how to fully clear the input buffer, which improved the program's ordering and preventing input errors. 
-
-
+While structuring the Banking System, I initialized the BankAccount.h class and worked with Anthony to add strong input‑validation functions in main(). I researched and added the <limits> library 
+so we could use. I had to look back into my notes of why I had to use limits and I learned that it gives me the maximum and minimum values for different data types.
+I used it in order to ignore the maximum number of characters in the input buffer (cin.ignore(numeric_limits<streamsize>::max(), '\n'); <<-- This line of code clears out everything left in the input buffer 
+after a bad entry and prevents infinite input loops. Finally, the program had become much more stable and reliable during user interactions. I also collaborated with Axel to review his member functions and confirm 
+that they were implemented correctly to ensure a smooth user experience.
 */
 
 
