@@ -167,3 +167,21 @@ This project helped me understand the importance of peer review and the benefits
 as they made the menu logic much simpler and neater to read and use for this project.
 
 */
+
+
+//Axel Picahrdo Martinez's Reflection:
+
+/*
+Reflection:
+ 
+The Project helped me better understand class definition and how encapsulation is used to keep data private within a class. 
+A key component of the work was ensuring that the implementation of the BankingSystem.cpp file operated effectively with the header
+file of BankAccount.h, specifically that each function definition matched its corresponding function. Me and Yusuf both worked on the main
+header file and it was essential that we created an organized structure for the class along with ensuring that all the variables and functions
+were defined properly. I feel more confident in my ability to create classes and define functions.
+
+*/
+
+
+
+ 
