@@ -113,20 +113,20 @@ int main() {
             break;
         }
 
-        case 3://check Balance // Check current balance
+        case 3: // Check current balance
             cout << fixed << setprecision(2); // Formats output to 2 decimal places for currency consistency
             cout << "Balance: $" << account.getBalance() << endl;
             break;
 
-        case 4://display // Display full account details (Name, ID, Balance)
+        case 4: // Display full account details (Name, ID, Balance)
             account.display();
             break;
 
-        case 5://History // Display full account details (Name, ID, Balance)
+        case 5://History 
             account.showHistory();
             break;
 
-        case 6://exit // Exit the program
+        case 6:// Exit the program
             cout << "Goodbye!" << endl;
             loop = false;
             break;
